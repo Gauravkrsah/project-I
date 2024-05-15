@@ -3,8 +3,8 @@
 # dependencies
 .env
 node_modules
-.vscode
-.gitignore
+vscode
+gitignore
 /.pnp
 .pnp.js
 .vscode
