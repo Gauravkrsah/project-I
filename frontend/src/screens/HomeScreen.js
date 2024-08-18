@@ -45,7 +45,7 @@ function HomeScreen() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentProductIndex((prevIndex) => (prevIndex + 1) % products.length);
-    }, 3000);
+    }, 6000);
     return () => clearInterval(interval);
   }, [products]);
 
@@ -53,33 +53,34 @@ function HomeScreen() {
     <div>
       <Helmet>
         <title>AgriProduct</title>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
       </Helmet>
       <div className="categories-bar">
         {/* Implement a category bar like Blinkit here */}
       </div>
-      <div className="banner">
-        <div className="banner-text">
+      <div className="banner relative w-full h-80 bg-gradient-to-r from-[#014907] to-[#101717] flex items-center justify-between text-white">
+        <div className="banner-text z-10 p-10">
           {products.length > 0 && (
             <>
-              <h2 className="banner-title">{products[currentProductIndex].name}</h2>
-              <h4 className="banner-subtitle">Buy now, you won't regret later</h4>
-              <button className="banner-button">
+              <h2 className="banner-title text-4xl font-bold mb-2">{products[currentProductIndex].name}</h2>
+              <h4 className="banner-subtitle text-xl mb-4">Buy now, you won't regret later</h4>
+              <button className="banner-button px-6 py-3 bg-[#ff6f61] text-white font-bold rounded-md hover:bg-[#e65c50] transition duration-300">
                 Shop Now
               </button>
             </>
           )}
         </div>
-        <div className="image-slider">
+        <div className="image-slider absolute inset-y-0 right-0 flex items-center justify-end pr-10">
           {products.length > 0 && (
             <img
-              src={products[currentProductIndex].image}
+              src={products[currentProductIndex].image.replace(/\.\w+$/, '.png')}
               alt={products[currentProductIndex].name}
-              className="slider-image"
+              className="slider-image w-1/4 h-auto object-cover opacity-0 transition-opacity duration-6000"
             />
           )}
         </div>
       </div>
-      <h2 style={{ marginBottom: '2rem' }}>Featured Products</h2>
+      <h2 className="text-2xl font-bold my-8">Featured Products</h2>
       <div className="products-grid">
         {loading ? (
           <LoadingBox />

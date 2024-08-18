@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/basir/mern-AgriProduct/issues"
   },
-  "homepage": "https://github.com/basir/mern-AgriProduct#readme"
+  "homepage": "https://github.com/basir/mern-AgriProduct#readme",
+  "dependencies": {
+    "axios": "^1.7.4",
+    "express": "^4.19.2",
+    "form-data": "^4.0.0"
+  }
 }

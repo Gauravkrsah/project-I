@@ -207,3 +207,226 @@ button.thumbnail {
   min-width: 150px;
 }
 
+.navbar {
+  background-color: #014907; /* Dark green */
+}
+
+.navbar-brand {
+  color: #d3d3d3; /* Gray-white */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.location-detection {
+  color: #d3d3d3; /* Gray-white */
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.location-detection i {
+  margin-right: 0.5rem;
+}
+
+.form-control {
+  width: 300px;
+  transition: width 0.5s ease-in-out;
+}
+
+.form-control:focus {
+  width: 400px;
+}
+
+.suggestions-list {
+  position: absolute;
+  background-color: white;
+  width: 300px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.badge {
+  background-color: #ff6f61;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+}
+
+.navbar-nav .nav-link .badge {
+  top: -10px;
+  right: -10px;
+}
+
+.bg-dark-green {
+  background-color: #014907;
+}
+
+.text-gray-white {
+  color: #d3d3d3;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.bg-main {
+  background-color: #ff6f61;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+/* Custom styles for the banner */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 320px; /* Reduced height */
+  background: linear-gradient(to right, #014907, #101717);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  text-align: left;
+  font-family: 'Raleway', sans-serif; /* Primary font */
+}
+
+.banner-text {
+  z-index: 2;
+  padding: 2.5rem;
+  opacity: 0;
+  animation: fadeIn 6s forwards;
+}
+
+.banner-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', serif; /* Secondary font */
+}
+
+.banner-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Raleway', sans-serif; /* Primary font */
+}
+
+.banner-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff6f61;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.5s ease;
+}
+
+.banner-button:hover {
+  background-color: #e65c50;
+  transform: scale(1.05);
+  opacity: 0.7;
+}
+
+.image-slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 2.5rem;
+}
+
+.slider-image {
+  width: 25%;
+  height: auto;
+  object-fit: cover;
+}
+
+.products-grid .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.products-grid .col {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.products-grid .col:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; /* Ensure the image fits within the container */
+  margin-bottom: 1rem;
+  background: transparent; /* Ensure the background is transparent */
+}
+
+.product-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.product-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff6f61;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.5s ease;
+}
+
+.product-button:hover {
+  background-color: #e65c50;
+  transform: scale(1.05);
+  opacity: 0.7;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
