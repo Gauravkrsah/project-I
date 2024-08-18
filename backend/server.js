@@ -15,7 +15,7 @@ mongoose
     console.log('connected to db');
   })
   .catch((err) => {
-    console.log(err.message);
+    console.error('Database connection error:', err.message);
   });
 
 const app = express();
@@ -42,7 +42,9 @@ app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
 );
 
+// Enhanced error-handling middleware
 app.use((err, req, res, next) => {
+  console.error('Error:', err.message);
   res.status(500).send({ message: err.message });
 });
 

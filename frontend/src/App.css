@@ -36,3 +36,53 @@
     transform: rotate(360deg);
   }
 }
+/* src/App.css */
+.hero-section {
+  background: url('/path/to/your/hero-image.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+}
+
+
+/* src/App.css or your specific CSS file */
+.custom-button {
+  background-color: #014907;
+  color: #F3EBEB;
+  border: none;
+}
+
+.custom-button:hover {
+  background-color: #F3EBEB;
+  color: #014907;
+  border: 1px solid #014907;
+}
+
+.card {
+  margin-bottom: 10px; /* Reduce space between cards */
+}
+
+.card-body {
+  padding: 10px; /* Reduce padding inside the card */
+}
+
+.card-img-top {
+  margin-bottom: 5px; /* Reduce space between image and text */
+}
+
+.card-title {
+  margin-bottom: 5px; /* Reduce space below the title */
+}
+
+.card-text {
+  margin-bottom: 5px; /* Reduce space below the text */
+}
