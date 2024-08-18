@@ -45,7 +45,7 @@ function HomeScreen() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentProductIndex((prevIndex) => (prevIndex + 1) % products.length);
-    }, 5000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [products]);
 
@@ -57,28 +57,13 @@ function HomeScreen() {
       <div className="categories-bar">
         {/* Implement a category bar like Blinkit here */}
       </div>
-      <div
-        style={{
-          background: "linear-gradient(to right, #F3EBEB, #014907, #101717)",
-          color: "#fff",
-          padding: "2rem",
-          textAlign: "left",
-          marginBottom: "2rem",
-          borderRadius: "15px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          height: "300px",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
-        <div>
+      <div className="banner">
+        <div className="banner-text">
           {products.length > 0 && (
             <>
-              <h2 style={{ fontSize: "32px" }}>{products[currentProductIndex].name}</h2>
-              <h4>Buy now, you won't regret later</h4>
-              <button className="bg-[#014907] text-[#F3EBEB] border-none hover:bg-[#F3EBEB] hover:text-[#014907] hover:border hover:border-[#014907] p-2 mt-2">
+              <h2 className="banner-title">{products[currentProductIndex].name}</h2>
+              <h4 className="banner-subtitle">Buy now, you won't regret later</h4>
+              <button className="banner-button">
                 Shop Now
               </button>
             </>
@@ -90,14 +75,6 @@ function HomeScreen() {
               src={products[currentProductIndex].image}
               alt={products[currentProductIndex].name}
               className="slider-image"
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                borderRadius: "15px",
-                animation: "slideIn 5s infinite",
-              }}
             />
           )}
         </div>
